@@ -34,7 +34,9 @@ useEffect(() => {
 /* Busqueda pokemons por search */
 function searchFilter(filter) {
   setSearch(filter); //Indicar al estado de search que se está buscando algo
-  
+  setHeightFilter("nofilter");
+  setWeightFilter("nofilter"); // Reiniciar estados de altura y peso
+
   /* Filtrar por busqueda en search */
   if (filter) {
     const filteredPokemons = pokemonsCopy.filter((p) => p.name.toLowerCase().includes(filter.toLowerCase()));
