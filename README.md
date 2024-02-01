@@ -8,6 +8,10 @@ App de Pokemon desarrollada para la prueba técnica de FooTalent.
 * Filtro por peso y altura: Podemos ver los pokemones por peso o altura mayor (Higher Weight / Height), o por
   peso o altura menor (Lower Weight / Height). De más grandes a más pequeños o de pequeños a más grandes.
 
+* Botón de reinicio de filtros para ayudar al usuario a establecer la busqueda por defecto.
+
+* Lógica para que el filtro de peso no se superponga al filtro de altura. Se deshabilita un filtro al utilizar el otro.
+
 * Por último, tenemos el detalle de cada pokemon. Al hacer click en un pokemon, podremos visualizar en una ruta
   aparte (React Router DOM) el detalle del Pokemon, incluyendo sus características como: Habilidades, tipos, estadísticas, etc.
 
