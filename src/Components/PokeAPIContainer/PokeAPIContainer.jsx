@@ -118,7 +118,7 @@ function getPokemonsData() {
         <section className='pokeapi-container'>
           <article className='title-container'>
             <h2 translate='no'>PokeAPI</h2>
-            <p>Search for pokemons, find it all</p>
+            <p>Search for pokemons, find them all</p>
           </article>
 
           <article className='filters-container'>
