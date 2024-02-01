@@ -37,7 +37,7 @@ export const PokemonDetails = () => {
         <section className="pokemon-container">
         
             <article className="pokemon-main">
-                <img src={pokemonData.sprites.front_default} />
+                <img src={pokemonData.sprites.front_default} loading="lazy"/>
                 <h3 className="pokemon-name">{pokemonData.name}</h3>
             </article>
             <h4>Details:</h4>

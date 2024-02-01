@@ -10,7 +10,7 @@ export const PokemonItem = ({pokemon}) => {
     <Link to={`/pokemon/${pokemon.name}`} className="pokemon-item">
       {pokemonInfo && 
         <>
-          <img src={pokemonInfo.sprites.front_default}/> 
+          <img src={pokemonInfo.sprites.front_default} loading="lazy"/> 
           <h3 className="pokemon-name">{pokemonInfo.name}</h3>
           <h4>Id: {pokemonInfo.id}</h4>
           <div className="pokemon-info">

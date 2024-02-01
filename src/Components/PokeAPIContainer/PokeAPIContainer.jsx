@@ -142,7 +142,7 @@ function getPokemonsData() {
           </article>
           {(pokemonsList.length === 0 && search.length > 0) ?
           <div className='search-error'>
-            <img className='search-error-pikachu' src={pikachudetective}/>
+            <img className='search-error-pikachu' src={pikachudetective} loading='lazy'/>
             <p>Oops! We didn&apos;t find &quot;<b>{search}</b>&quot;, try again</p>
           </div>
             :
