@@ -11,6 +11,7 @@ export const PokemonDetails = () => {
 
     //Obtener los datos del pokemon
     useEffect(() => {
+        window.scrollTo(0, 0); // Scroll hasta arriba al cargar los detalles
         getPokemonsData()
     }, [])
 
