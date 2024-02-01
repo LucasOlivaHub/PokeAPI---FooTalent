@@ -13,6 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={ <PokeAPIContainer/>} />
           <Route path='/pokemon/:nombre' element={ <PokemonDetails/>} />
+          <Route path='*' element={<PokeAPIContainer/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
