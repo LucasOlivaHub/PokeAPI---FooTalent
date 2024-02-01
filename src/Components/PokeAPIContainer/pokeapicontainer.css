@@ -77,6 +77,22 @@ main {
     margin-top: 10px;
 }
 
+.reset-filters-btn {
+    width: fit-content;
+    align-self: center;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-weight: 500;
+    background-color: rgb(238, 238, 238);
+    border: 1px solid #080808;
+    cursor: pointer;
+}
+
+.reset-filters-btn:hover {
+    background-color: rgb(252, 214, 214);
+    transition: 200ms;
+}
+
 /* Medias queries */
 
 /* Tablet / Mobile L */

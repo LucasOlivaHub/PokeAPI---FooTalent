@@ -13,6 +13,9 @@ export const PokeAPIContainer = () => {
   const [pokemonsData, setPokemonsData] = useState([]);
   const [search, setSearch] = useState("");
 
+  const [heightFilter, setHeightFilter] = useState("nofilter")
+  const [weightFilter, setWeightFilter] = useState("nofilter")
+
 /* Cargar pokemones normalmente */
   useEffect(() => {
     /* Si no hay busqueda, recargar pokemones */
@@ -46,6 +49,7 @@ function searchFilter(filter) {
 /* Filtros por peso y altura */
 
 function filterByWeight(filtro) {
+  setWeightFilter(filtro)
   //Filtrar por peso según el value del select
     if(filtro === "mayor-peso") {
       const sortedPokemons = pokemonsData.sort((a, b) => b.weight - a.weight);
@@ -59,6 +63,7 @@ function filterByWeight(filtro) {
 }
 
 function filterByHeight(filtro) {
+  setHeightFilter(filtro)
   //Filtrar por altura según el value del select
   if(filtro === "mayor-altura") {
     const sortedPokemons = pokemonsData.sort((a, b) => b.height - a.height);
@@ -111,6 +116,12 @@ function getPokemonsData() {
     });
 }
 
+function resetFilters() {
+  setSearch("");
+  setHeightFilter("nofilter");
+  setWeightFilter("nofilter");
+  getPokemons();
+}
 
 
   return (
@@ -127,18 +138,25 @@ function getPokemonsData() {
               placeholder='Search by name...'/>
 
               <div className='filtersby-container'>
-                  <select className='filter-weight' onChange={(e) => filterByWeight(e.target.value)}>
+                  <select className='filter-weight' value={weightFilter}  onChange={(e) => filterByWeight(e.target.value)}
+                  disabled={heightFilter !== "nofilter" ? true : false} >
                     <option value={"nofilter"}>--Filter by weight--</option>
                     <option value={"menor-peso"}>Lower weight</option>
                     <option value={"mayor-peso"}>Higher weight</option>
                   </select>
 
-                  <select className='filter-height' onChange={(e) => filterByHeight(e.target.value)}>
-                    <option value={"nofilter"}>Filter by height</option>
+                  <select className='filter-height'  value={heightFilter} onChange={(e) => filterByHeight(e.target.value)}
+                  disabled={weightFilter !== "nofilter" ? true : false}>
+                    <option value={"nofilter"}>--Filter by height--</option>
                     <option value={"menor-altura"}>Lower height</option>
                     <option value={"mayor-altura"}>Higher height</option>
                   </select>
               </div>
+
+              {
+              (weightFilter !== "nofilter" || 
+              heightFilter !== "nofilter" || search !== "" ) && <button className='reset-filters-btn' onClick={() => resetFilters()}>Reset filters</button>
+              }
           </article>
           {(pokemonsList.length === 0 && search.length > 0) ?
           <div className='search-error'>
