@@ -44,7 +44,7 @@ export const PokemonDetails = () => {
             <article className="pokemon-info-container">
                 <div className="pokemon-info">
                     <b>Weight:</b> <p>{pokemonData.weight} kg</p>
-                    <b>Height:</b> <p>{pokemonData.height} cm</p>
+                    <b>Height:</b> <p>{pokemonData.height * 10} cm</p>
                 </div>
 
                 <div className="pokemon-info"> 
