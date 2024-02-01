@@ -1,0 +1,32 @@
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 12px;
+    color: #efefef;
+}
+
+footer .footer-section-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+footer div a{
+    color: #27d4d4;
+    text-shadow: 2px 2px 4px #080808;
+}
+
+footer div a:hover {
+    color: #64e8ff;
+    transition: 200ms;
+}
+
+@media screen and (min-width: 600px) {
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 30px;
+        color: #efefef;
+    }
+}

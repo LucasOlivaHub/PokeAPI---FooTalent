@@ -1,0 +1,104 @@
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 75px 30px;
+}
+
+.pokeapi-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    min-height: 100vh;
+    padding: 25px;
+    height: auto;
+    background-color: rgb(233, 233, 233);
+    border-radius: 16px;
+    color: #080808;
+}
+
+.pokeapi-container .title-container {
+    text-align: center;
+    width: fit-content;
+    align-self: center;
+}
+
+.pokeapi-container h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Honk', system-ui;
+}
+
+.pokeapi-container .filters-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.pokeapi-container .filters-container .search-filter {
+    border-radius: 8px;
+    padding: 8px 5px;
+    border: 1px solid #0808087c;
+}
+
+.pokeapi-container .filters-container .filtersby-container {
+    display: flex;
+    gap: 12px;
+}
+
+.pokeapi-container .filters-container .filtersby-container select {
+    width: 85%;
+    padding: 5px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.search-error {
+    margin-top: 50px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+.search-error-pikachu {
+    width: 100px;
+
+}
+
+.current-pokemons-text {
+    margin-top: 10px;
+}
+
+/* Medias queries */
+
+/* Tablet / Mobile L */
+
+@media screen and (min-width: 650px) {
+    .pokeapi-container {
+        width: 600px;
+    }
+
+    .pokeapi-container h2 {
+        font-size: 4rem;
+    }
+
+    .pokeapi-container .filters-container {
+        width: 60%;
+    }
+}
+
+/* Notebook */
+
+@media screen and (min-width: 1000px) {
+    .pokeapi-container {
+        width: 800px;
+    }
+}

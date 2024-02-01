@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Noto+Sans:wght@100;300;400;500;700;900&display=swap');
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* generales */
+
+.background {
+  background: linear-gradient(43deg, rgba(111,135,215,1) 0%, rgba(32,59,152,1) 28%, rgba(4,18,75,1) 79%);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.pokemon-name:first-letter {
+  text-transform: uppercase;
+}
