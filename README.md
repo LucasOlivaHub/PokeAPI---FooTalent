@@ -14,7 +14,7 @@ App de Pokemon desarrollada para la prueba técnica de FooTalent.
   Las estadísticas de cada pokemon cuentan con una lógica para que se distingan por color según valores:
   - Rojo: bajos (menor a 50)
   - Naranja: medios (entre 50 y 75)
-  - Verde: altos (mayor de 100)
+  - Verde: altos (mayor de 75)
 
   
 
