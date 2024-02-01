@@ -2,7 +2,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    gap: 20px;
     padding: 25px 12px;
     color: #efefef;
 }
@@ -10,6 +10,13 @@ footer {
 footer .footer-section-1 {
     display: flex;
     flex-direction: column;
+}
+
+
+footer .footer-section-2 {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
 }
 
 footer div a{
