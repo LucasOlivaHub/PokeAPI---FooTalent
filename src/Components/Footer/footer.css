@@ -2,7 +2,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 70px;
+    gap: 50px;
     padding: 25px 12px;
     color: #efefef;
 }
